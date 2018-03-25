@@ -1,0 +1,49 @@
+Java Tech Lead Interview Questions
+------------------------------------------------------------------
+
+SAS Group
+----------------------------------------------------------------------------------------------------------
+-	How many optimal threads an application can have ?
+-	Complete the first tasks(method_1) of all threads and then go for second tasks (method_2) for all 	
+	threads,how will you achieve the same?
+-	What is the loose coupling ?
+-	Which one is loose coupling? Composition or Inheritance?
+-	What is meant by Absatraction and how will you achieve the same in Java ?
+-	How to accomplish the threading functionality by custom logic without Java Threads ?
+-	What is difference between structural and behavioural desing patterns ?
+-	What is flyweight design pattern in Java ?
+-	Why final access modifier is required to class for creating Immutable Class ?
+-	What is user of Interfaces in Java ?
+-	Why constants in Interfaces are final and can not be overridden ?
+-	Can two Interfaces have same method and be extended by single class ?
+-	What is REST API architecture and how it is different from JAX-WS webservices?
+-	What are the differences between Spring Boot and Spring 4.x ?
+-	Please give practical example for Aggregation and Composition ?
+-	What are differences between SOAP and REST API in all means ?
+-	Please explain Java 8 features in details.
+- 	Please give practical exmaple (Project Example) for Immutable class .
+-	Please explain any use case (Project Example) for Abstract class and Interface.
+- 	How would load the file of having size more than computer RAM memory ? (Unix)
+-	What is use of synchronization and real example apart from object state saving ?
+-	What will be the considerrations while designing the website like OLA/Uber ?
+-	What are the restrication on the keys of ConcurrentHashMap ?
+- 	How to sort data in file ? (Unix)
+
+Deutsche Bank Group
+----------------------------------------------------------------------------------------------------------
+-  	How to reverse Linked List of Node ? (Data Structure List)
+-	Write a java program to find small number out of two entered number and swap them without 	
+	using third variable ? and also write unit test cases to cover all possible scenarios.
+-	Does wait method release lock on the object ?
+-	How hashmap works internally ?
+- 	How hashmap "put" method achieve O(1) [constant] complexity ?
+-	Can other threads call unsynchronized methods on locked objects by other thread ?
+
+	
+
+
+
+
+
+
+
