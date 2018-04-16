@@ -39,7 +39,20 @@ Deutsche Bank Group
 - 	How hashmap "put" method achieve O(1) [constant] complexity ?
 -	Can other threads call unsynchronized methods on locked objects by other thread ?
 
-	
+ADP
+----------------------------------------------------------------------------------------------------------
+-	How to configure the MVN commands in Jenniks pipeline job automatically ?
+-	Why we need wrapper classes in java over primitives ?
+-	What are OOPs concepts ?
+-	Explain enscapsulation and polymorphism achieved in your project ?
+-	What are performance issues you faced in your career and resolved them.
+-	What are the ways to improve performance at database level ?
+-	How did achieve load balancing and clustering in your project with WebSphere App Server?
+-	How will you design immutable/wrapper classes in java ?
+-	Explain any requirement that you design and architect.
+-	Will finally block be executed if return statement is added in try block ?
+-	Explain exceptions in java and how will you handle that in your application.
+-		
 
 
 
