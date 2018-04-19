@@ -53,10 +53,21 @@ ADP
 -	Will finally block be executed if return statement is added in try block ?
 -	Explain exceptions in java and how will you handle that in your application.
 -		
-
-
-
-
-
-
-
+-	What is exposure towards containers like Dockers ?
+-	Ansible is agent less then, What is connection method used by Ansible to connect target servers ? SSH
+-	What are benefits of using SSH over other connections techniques ?
+-	What is Ansible core and Ansible Tower and differences in using them ?
+-	How will you migrate 1000 WebSphere App Servers from older versions to newer versions ?
+-	If performance of application gets downgrade in PROD then how you will you analyse and provide the fix
+	for the same?
+-	What are your expertise at sql/oracle layer?
+-	How will you analyse the performance of looking at heap dumps ? (Application, Application server, DB)
+-	How you provide the quick solutions on triage/swat calls ?
+-	How load balancing works and how will you configure the same ?
+-	What things to be considered before migrating application from single node to clustered environment ?
+	(Session Replication (InMemory Replication, File System Replication, Database Replication))
+-	What are different algorithms of configuring load balancing in application ?
+-	How will you ensure the DR any running application in PROD ?
+-	Have you desinged any solution recently and explain the same also any design patterns used ?
+-	Do you have any exposure to the middle ware technologies ? (JMS, Web Services)
+-	How will you analyse the java heap dump ?
