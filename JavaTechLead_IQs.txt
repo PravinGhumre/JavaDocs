@@ -1,73 +1,99 @@
 Java Tech Lead Interview Questions
 ------------------------------------------------------------------
 
-SAS Group
 ----------------------------------------------------------------------------------------------------------
--	How many optimal threads an application can have ?
--	Complete the first tasks(method_1) of all threads and then go for second tasks (method_2) for all 	
-	threads,how will you achieve the same?
--	What is the loose coupling ?
--	Which one is loose coupling? Composition or Inheritance?
--	What is meant by Absatraction and how will you achieve the same in Java ?
--	How to accomplish the threading functionality by custom logic without Java Threads ?
--	What is difference between structural and behavioural desing patterns ?
--	What is flyweight design pattern in Java ?
--	Why final access modifier is required to class for creating Immutable Class ?
--	What is user of Interfaces in Java ?
--	Why constants in Interfaces are final and can not be overridden ?
--	Can two Interfaces have same method and be extended by single class ?
--	What is REST API architecture and how it is different from JAX-WS webservices?
--	What are the differences between Spring Boot and Spring 4.x ?
--	Please give practical example for Aggregation and Composition ?
--	What are differences between SOAP and REST API in all means ?
--	Please explain Java 8 features in details.
-- 	Please give practical exmaple (Project Example) for Immutable class .
--	Please explain any use case (Project Example) for Abstract class and Interface.
-- 	How would load the file of having size more than computer RAM memory ? (Unix)
--	What is use of synchronization and real example apart from object state saving ?
--	What will be the considerrations while designing the website like OLA/Uber ?
--	What are the restrication on the keys of ConcurrentHashMap ?
-- 	How to sort data in file ? (Unix)
+SAS
+---------------------------------------------------------------------------------------------------------	
+	How many optimal threads an application can have ?
+	Complete the first tasks(method_1) of all threads and then go for second tasks (method_2) for all 	
+	threads, how will you achieve the same? (CountDownLatch and CyclicBarrier)
+	What is the loose coupling ?
+	Which one is loose coupling? Composition or Inheritance? (Composition is loose coupling over Inheritance)
+	What is meant by Abstraction and how will you achieve the same in Java ? (Abstract Class and Interface)
+	How to accomplish the threading functionality by custom logic without Java Threads ?
+	What is difference between structural and behavioral design patterns ? (Composition of objects vs communication of objects)
+	What is flyweight design pattern in Java ? (Reusing already created objects rather than creating new ones)
+	Why final access modifier is required to class for creating Immutable Class ? (To avoid from extending and passing arguments through constructor)
+	What is user of Interfaces in Java ?
+	Why constants in Interfaces are final and cannot be overridden ? (bcoz implemented classes can change the value of that)
+	Can two Interfaces have same method and be extended by single class ? (Yes)
+	What is REST API architecture and how it is different from JAX-WS web services ? (nature of payload, security, transaction, json/xml,)
+	What are the differences between Spring Boot and Spring 4.x ? (Spring Boot Convention over Configuration)
+	Please give practical example for Aggregation and Composition ?
+	What are differences between SOAP and REST API in all means ? (nature of payload, security, transaction, json/xml,)
+	Please explain Java 8 features in details. (Lambda, Functional Interface, Stream, DateTime API, Default Method in Interface, Method Reference)
+ 	Please give practical example (Project Example) for Immutable class.
+	Please explain any use case (Project Example) for Abstract class and Interface.
+ 	How would load the file of having size more than computer RAM memory ? (Unix) (reading file in chuck and sorting and writing them to new temp file and finally merging all of them)
+	What is use of synchronization and real example apart from object state saving ? (Sending data accross in deprecated (binary) format)
+	What will be the considerations while designing the website like OLA/Uber ? (SLA Performance, Scaling, Availability, Security, Maintainability and so on)
+	What are the restriction on the keys of ConcurrentHashMap ? (Threading ENV)
+ 	How to sort data in file ? (Unix) (reading file in chuck and sorting and writing them to new temp file and finally merging all of them)
 
-Deutsche Bank Group
-----------------------------------------------------------------------------------------------------------
--  	How to reverse Linked List of Node ? (Data Structure List)
--	Write a java program to find small number out of two entered number and swap them without 	
+DBG
+---------------------------------------------------------------------------------------------------------  	
+	How to reverse Linked List of Node ? (Data Structure List)
+	Write a java program to find small number out of two entered number and swap them without 
 	using third variable ? and also write unit test cases to cover all possible scenarios.
--	Does wait method release lock on the object ?
--	How hashmap works internally ?
-- 	How hashmap "put" method achieve O(1) [constant] complexity ?
--	Can other threads call unsynchronized methods on locked objects by other thread ?
+	Does wait method release lock on the object ?
+	How hashmap works internally ?
+ 	How hashmap "put" method achieve O(1) [constant] complexity ?
+	Can other threads call unsynchronized methods on locked objects by other thread ?
 
 ADP
-----------------------------------------------------------------------------------------------------------
--	How to configure the MVN commands in Jenniks pipeline job automatically ?
--	Why we need wrapper classes in java over primitives ?
--	What are OOPs concepts ?
--	Explain enscapsulation and polymorphism achieved in your project ?
--	What are performance issues you faced in your career and resolved them.
--	What are the ways to improve performance at database level ?
--	How did achieve load balancing and clustering in your project with WebSphere App Server?
--	How will you design immutable/wrapper classes in java ?
--	Explain any requirement that you design and architect.
--	Will finally block be executed if return statement is added in try block ?
--	Explain exceptions in java and how will you handle that in your application.
--		
--	What is exposure towards containers like Dockers ?
--	Ansible is agent less then, What is connection method used by Ansible to connect target servers ? SSH
--	What are benefits of using SSH over other connections techniques ?
--	What is Ansible core and Ansible Tower and differences in using them ?
--	How will you migrate 1000 WebSphere App Servers from older versions to newer versions ?
--	If performance of application gets downgrade in PROD then how you will you analyse and provide the fix
-	for the same?
--	What are your expertise at sql/oracle layer?
--	How will you analyse the performance of looking at heap dumps ? (Application, Application server, DB)
--	How you provide the quick solutions on triage/swat calls ?
--	How load balancing works and how will you configure the same ?
--	What things to be considered before migrating application from single node to clustered environment ?
+---------------------------------------------------------------------------------------------------------
+	How to configure the MVN commands in Jenkins pipeline job automatically ?
+	Why we need wrapper classes in java over primitives ?
+	What are OOPs concepts ?
+	Explain encapsulation and polymorphism achieved in your project ?
+	What are performance issues you faced in your career and resolved them.
+	What are the ways to improve performance at database level ?
+	How did achieve load balancing and clustering in your project with WebSphere App Server?
+	How will you design immutable/wrapper classes in java ?
+	Explain any requirement that you design and architect.
+	Will finally block be executed if return statement is added in try block ?
+	Explain exceptions in java and how will you handle that in your application. 		
+	What is exposure towards containers like Dockers ?
+	Ansible is agent less then, What is connection method used by Ansible to connect target servers ? SSH
+	What are benefits of using SSH over other connections techniques ?
+	What is Ansible core and Ansible Tower and differences in using them ?
+	How will you migrate 1000 WebSphere App Servers from older versions to newer versions ?
+	If performance of application gets downgrade in PROD then how you will you analyse and provide the fix for the same?
+	What are your expertise at sql/oracle layer?
+	How will you analyze the performance of looking at heap dumps ? (Application, Application server, DB)
+	How you provide the quick solutions on triage/swat calls ?
+	How load balancing works and how will you configure the same ?
+	What things to be considered before migrating application from single node to clustered environment ?
 	(Session Replication (InMemory Replication, File System Replication, Database Replication))
--	What are different algorithms of configuring load balancing in application ?
--	How will you ensure the DR any running application in PROD ?
--	Have you desinged any solution recently and explain the same also any design patterns used ?
--	Do you have any exposure to the middle ware technologies ? (JMS, Web Services)
--	How will you analyse the java heap dump ?
+	What are different algorithms of configuring load balancing in application ?
+	How will you ensure the DR any running application in PROD ?
+	Have you designed any solution recently and explain the same also any design patterns used ?
+	Do you have any exposure to the middle ware technologies ? (JMS, Web Services)
+ 	How will you analyses the java heap dump ?
+
+Siemens
+---------------------------------------------------------------------------------------------------------
+	Brief about your current project and your role.
+	What are the SOLID design principles and explain LSP and DIP in detail.
+	What are benefits of Dependency Inversion ? Hint (Loose Coupling and Testability)
+	What are differences between REST and SOPA web services ?
+	What are differences between GET POST PUT and DELETE https methods of REST API ?
+	What is meant by Continuous Integration and Continuous Deployment ?
+	Which one will be used to soft delete resource in context of REST API, DELETE or PUT ?
+	What are benefits of Spring Boot and limitations as well?
+	Explain Java 8 features in detail. (Lambda, Functional Interface, Stream, DateTime API, Default Method in Interface, Method Reference)
+	Why default methods added in interface in java 8 ? (backward compatibility)
+	Is java script is Object Oriented language ? (Yes)
+
+	
+	
+Useful Sites for Java Interview : -
+------------------------------------------
+https://java2blog.com/java-interview-programs/
+https://www.dineshonjava.com/whats-new-in-spring-framework-4x/
+http://codepumpkin.com/cyclicbarrier-java-concurrency-utilities/
+https://stackify.com/java-performance-tools-8-types-tools-need-know/
+https://crunchify.com/
+http://javadecodedquestions.blogspot.hk/2012/12/java-memory-management.html
+http://infotechgems.blogspot.hk/2011/11/java-collections-performance-time.html
+http://tutorials.jenkov.com/
