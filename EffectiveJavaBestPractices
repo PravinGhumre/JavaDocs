@@ -1,0 +1,96 @@
+Creating and Destroying Objects
+- Consider static factory methods instead of constructor.
+- Consider a builder factory pattern when faced with many constructors.
+- Enforce the singleton property with a private constructor or an enum type.
+- Enforce non insatiability with a private constructor.
+- Avoid creating unnecessary objects.
+- Eliminate obsolete objects references.
+- Avoid finalizes.
+ 
+Methods Common to All
+- Obey the general contract when overriding equals
+- Always override hashcode when you override equals.
+- Always override toString.
+- Override clone judiciously.
+- Consider implementing Comparable
+ 
+Classes and Interfaces
+- Minimize the accessibly of classes and members.
+- In public classes, use accessor methods, not public fields
+- Minimize mutability.
+- Favor Composition over Inheritance.
+- Design and document for Interfaces or else prohibit it.
+- Prefer interfaces to abstract classes.
+- User interface only to define types.
+- Prefer class hierarchies to tagged classes.
+- Use function objects to represent strategies.
+- Favor static member class over not-static.
+ 
+Generics
+- Don’t use raw types in new code.
+- Eliminate unchecked warnings.
+- Prefer list to arrays.
+- Favor generic types.
+- Favor generic methods.
+- Use bounded wildcards to increase API flexibility.
+- Consider type safe heterogeneous containers.
+ 
+Enums and Annotations
+- Use enums instead of int constants.
+- Use instance fields instead of ordinals.
+- Use EnumSet instead of bit fields.
+- Emulate extensible enums with interfaces.
+- Prefer annotations to naming patterns.
+- Consistently use override annotation.
+- Use marker interfaces to define types.
+ 
+Methods
+- Check parameters for validity.
+- Make defensive copies when needed.
+- Design method signature carefully.
+- Use overloading judiciously.
+- Use varargs judiciously.
+- Return empty arrays or collections, not null.
+- Write doc comments for all exposed API elements.
+ 
+General Programming
+- Minimize the scope of local variables.
+- Prefer for-each loops to traditional for loops.
+- Know and use the libraries.
+- Avoid float and double when exact answers are required.
+- Prefer primitive types to boxed primitives.
+- Avoid strings where other types are appropriate.
+- Beware the performance of string concatenation.
+- Refer to objects by their interfaces.
+- Prefer interfaces to reflection.
+- Use native methods judiciously.
+- Optimize judiciously.
+- Adhere to generally accepted naming conventions.
+ 
+Exceptions
+- Use exceptions only for exceptional conditions.
+- Use checked exceptions for recoverable conditions and runtime exceptions for programming errors.
+- Avoid unnecessary use of checked exceptions.
+- Favor the use of standard exceptions.
+- Throw exceptions appropriate to the abstraction.
+- Document all exceptions thrown by each method.
+- Include failure-capture information in details message.
+- Strive for failure atomicity.
+- Don’t ignore exceptions.
+ 
+Concurrency
+- Synchronize access to shared mutable data.
+- Avoid excessive synchronization.
+- Prefer executors and tasks to threads.
+- Prefer concurrency utilities to wait and notify.
+- Document threads safety.
+- Use lazy initialization judiciously.
+- Don’t depend on thread scheduler.
+- Avoid thread groups.
+ 
+Serialization
+- Implement Serializable judiciously.
+- Consider using a custom serialized form.
+- Write readObject methods defensively.
+- For instance control, prefer enum types to readResolve.
+- Consider serialization proxies instead of serialized instances.

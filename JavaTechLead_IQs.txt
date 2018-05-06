@@ -1,49 +1,509 @@
 Java Tech Lead Interview Questions
 ------------------------------------------------------------------
 
-SAS Group
 ----------------------------------------------------------------------------------------------------------
--	How many optimal threads an application can have ?
--	Complete the first tasks(method_1) of all threads and then go for second tasks (method_2) for all 	
-	threads,how will you achieve the same?
--	What is the loose coupling ?
--	Which one is loose coupling? Composition or Inheritance?
--	What is meant by Absatraction and how will you achieve the same in Java ?
--	How to accomplish the threading functionality by custom logic without Java Threads ?
--	What is difference between structural and behavioural desing patterns ?
--	What is flyweight design pattern in Java ?
--	Why final access modifier is required to class for creating Immutable Class ?
--	What is user of Interfaces in Java ?
--	Why constants in Interfaces are final and can not be overridden ?
--	Can two Interfaces have same method and be extended by single class ?
--	What is REST API architecture and how it is different from JAX-WS webservices?
--	What are the differences between Spring Boot and Spring 4.x ?
--	Please give practical example for Aggregation and Composition ?
--	What are differences between SOAP and REST API in all means ?
--	Please explain Java 8 features in details.
-- 	Please give practical exmaple (Project Example) for Immutable class .
--	Please explain any use case (Project Example) for Abstract class and Interface.
-- 	How would load the file of having size more than computer RAM memory ? (Unix)
--	What is use of synchronization and real example apart from object state saving ?
--	What will be the considerrations while designing the website like OLA/Uber ?
--	What are the restrication on the keys of ConcurrentHashMap ?
-- 	How to sort data in file ? (Unix)
+SAS
+---------------------------------------------------------------------------------------------------------
 
-Deutsche Bank Group
-----------------------------------------------------------------------------------------------------------
--  	How to reverse Linked List of Node ? (Data Structure List)
--	Write a java program to find small number out of two entered number and swap them without 	
+	"Architecure defines what is going to be built and Design outlines how you will build it"
+	
+1>	How many optimal threads an application can have ? 
+		(Per Core - Per Thread, MultiCore CPU with hyper threading)
+	
+2>	Complete the first tasks (method_1) of all threads and then go for second tasks (method_2) for all 	
+	threads, how will you achieve the same? (CountDownLatch and CyclicBarrier)
+	
+	CountDownLatch: A synchronization aid that allows one or more threads to wait until a 
+		set of operations being performed in other threads complete.
+	CyclicBarrier: A synchronization aid that allows a set of threads to all wait for each other 
+		to reach a common barrier point.	
+	
+3>	What is the loose coupling ?
+	
+	Loose coupling is achieved by means of a design that promotes single-responsibility 
+	and separation of concerns.
+	A loosely-coupled class can be consumed and tested independently of other (concrete) classes.
+	Interfaces are a powerful tool to use for decoupling. Classes can communicate through interfaces rather than other concrete classes, 
+	and any class can be on the other end of that communication simply by implementing the interface.
+	
+4>	Which one is loose coupling? Composition or Inheritance? 
+	(Composition is loose coupling over Inheritance)
+	
+	It is safe to use inheritance within a package, where the subclass and the superclass implementations are under the control of the same programmers. It is also safe to use inheritance when extending classes specifically designed and documented for extension.
+	
+	Inheritance:- 
+	Pros:-
+		Code re-usability:- Whatever code defined in super class can be reused by any of its subclass.
+		Polymorphism:- means super class type variable can hold reference to an object of super class type or any of its subclass type.
+		Dynamic Binding:- means at run time JVM will decide which method to invoke based on class type of the object.
+		Ease of addition of new subclass:- Suppose need to add new subclass then it can be added just by inheriting the super class in the new class. It won’t affect neither super class nor its existing sub classes.
+	Cons:-
+
+		Extra Baggage:- Suppose want to use only one method of a class but not others, then we have to inherit the class which comes with all other unwanted methods and data members as well.
+		Tightly Coupled:- Super class and subclass are tightly coupled. Changes made to super class can break the subclass.
+		Weak encapsulation:- Suppose the return type of peel() method has been changed to “int”, in this case unless until in subclass the overridden method i.e. peel() ‘s return type not changed the code will not compile.
+		
+	
+	Composition :-
+				*** Composition without Abstraction is tight coupling. ****
+	Pros:-
+		Loosely coupled:- Any change to Fruit class does not affect to Apple class. Similarly also adding any method with same signature as Fruit class does not make any affect, and the code will compile perfectly.
+		Code re-usability:- Code re-usability can be achieved same as Inheritance but need to explicitly call the code which needs to be reused.
+		Stronger Encapsulation:- In composition if we change the return type of peel() in Fruit class, there is no need to change anything in Apple class. Without changing anything also the code will compile perfectly and run as well.
+	Cons:-
+		More Difficult to add new class :- It is less easier to add a new class in composition compared to Inheritance as need to write code explicitly in new class to reuse the existing ode.
+		Performance Cost:- The explicit method call forwarding / delegation approach has a performance cost compared to inheritance single invocation.
+		
+5>	What is meant by Abstraction and how will you achieve the same in Java ? 
+	(Abstract Class and Interface)
+	
+	Abstraction is design concern and Encapsulation is implementation concern.
+	
+	Abstraction:-
+		It is general concept formed by extracting common features from specific example or act of withdrawing 
+		or removing something unnecessary.
+		It is achieved by interface and Abstract class in Java.
+		It solves problems at design level.
+		For simplicity, hiding implementation by using Abstract class or Interface.
+		
+		
+	Encapsulation :-
+		It is mechanism that binds together code and data it manipulates and 
+		keeps both safe from outside interference and misuse.
+		It is achieved by access modifiers (Public, Private and Protected)
+		It solves the problems at implementation level.
+		For simplicity, hiding data using setters and getters.
+		
+	
+6>	How to accomplish the threading functionality by custom logic without Java Threads ?
+	
+	Dont Know
+
+7>	What is difference between structural and behavioral design patterns? 
+	(Composition of objects vs communication of objects)
+	
+	Structural design patterns deals with class and objects composition. The concept of inheritance is used to compose interfaces and define ways to compose objects to obtain new functionality.
+	
+	Behavioral design patterns are specifically concerned with communication between objects.
+	
+8>	What is flyweight design pattern in Java ? 
+	(Reusing already created objects rather than creating new ones)
+	
+	When creating number of object whose having some common featuer in that case flyweight deign pattern is used to reuse similar object with intrinsic data and adding extrinsic data at runtime.
+	
+	Employee Visiting Card of Company.
+		
+		Intrinsic Details : - Company Details [Static Data]
+		Extrinsic Details :	- Unique Employee Details [Dynamic Data]
+	
+9>	Why final access modifier is required to class for creating Immutable Class ? How to create 	
+	Immutable Classed in Java.
+	(To avoid from 	extending and passing arguments through constructor)
+	
+	Private Constructor, Private Data Members, Public Getter Methods and Final Keyword for Class.
+	(returning defensive copies from getter methods for immutable fields like Date.)
+	
+10>	What is use of Interfaces in Java ?
+	Interfaces are used to achieve Abstraction in java and to club common features from cross hierarchal entities.
+	Interfaces are used to define contract and implemented classes implements those contracts. 	
+	And it has HAS-A relationship.
+	
+11>	Why constants in Interfaces are final and cannot be overridden? 
+	(bcoz implemented classes can change the value of that)
+	Interfaces are contracts and not part of implementation 
+	
+12>	Can two Interfaces have same method and be extended by single class ? 
+	(Yes)
+	Single class can give the implenation for the same and will be used for both interfaces. 
+	
+13>	What is REST API architecture and how it is different from JAX-WS web services ?
+	(nature of payload, security, transaction, json/xml,)
+	
+	SOAP :-
+		XML-based message protocol.
+		Uses WSDL for communication between consumer and provider.
+		Invokes services by calling RPC method.
+		Does not return human readable result.
+		Transfer is over HTTP,also uses other protocols such as SMTP, FTP etc.
+		Javascript can call SOAP but it is difficult to implement.
+		Performance is not great compared to REST.
+		It supports transactions (ACID properties).
+		Security is SSL and message level as well.
+		User defined Error Handling.
+		
+	REST :-	
+		An architectural style protocol.
+		Uses XML or JSON to send and receive data.
+		Simply call services via URL path.
+		Result is readable which is just plain xml or JSON.
+		Transfer is over HTTP only.
+		Easy to call from Javascript.
+		Performance is much better compared to SOAP less CPU Intensive, leaner code etc.
+		It does not support transaction demarcation (ACID.
+		It supports only SSL security.
+		HTTP Error codes.
+	
+14>	What are the differences between Spring Boot and Spring 4.x ? 
+	(Spring Boot Convention over Configuration)
+	
+	The primary goals of Spring Boot are as below.
+	
+	- To provide radically faster and widely accessible 'getting started' for all Spring development.
+	- To be opinionated out of the box, but get out of the way quickly as requirements start diverge 
+	  from default.
+	- To provide a range of non-functional features that are common to large classes of projects 
+		(e.g. Embedded servers, security, metrics, health checks, externalized configuration)
+	- Spring Boot on the other hand helps to build an application faster using spring technologies   	
+	  without xml configuration.
+		
+15>	Give practical example for Aggregation and Composition?
+	
+	Aggregation :- Part can be exist if Whole dies. 
+	Composition :- Part can NOT be exist without Whole. 
+	(Composition without abstraction is tight coupling)	
+	
+16>	What are differences between SOAP and REST API in all means ? (nature of payload, security, 	
+	Transaction, json/xml,)
+	
+	SOAP :-
+		XML-based message protocol.
+		Uses WSDL for communication between consumer and provider.
+		Invokes services by calling RPC method.
+		Does not return human readable result.
+		Transfer is over HTTP,also uses other protocols such as SMTP, FTP etc.
+		Javascript can call SOAP but it is difficult to implement.
+		Performance is not great compared to REST.
+		It supports transactions (ACID properties).
+		Security is SSL and message level as well.
+		
+	REST :-	
+		An architectural style protocol.
+		Uses XML or JSON to send and receive data.
+		Simply call services via URL path.
+		Result is readable which is just plain xml or JSON.
+		Transfer is over HTTP only.
+		Easy to call from Javascript.
+		
+		Performance is much better compared to SOAP less CPU Intensive, leaner code etc.
+		It does not support transaction demarcation (ACID.
+		It supports only SSL sercurity.
+	
+	
+17>	Please explain Java 8 features in details. 
+		Lambda Expression,
+		Functional Interface,
+		Streams,
+		DateTime API,
+		Default Method in Interface,
+		Method Reference
+		Strin JOIN method.
+ 	
+18>	Give practical example (Project Example) for Immutable class.
+	Customer class we have created Immutable since we dont want to get changed the values of it once populated.
+	
+19>	Explain any use case (Project Example) for Abstract class and Interface.
+	
+20>	How would load the file of having size more than computer RAM memory ? 
+	(Unix) 
+	(reading file in chuck and sorting and writing them to new temp file and finally merging all of them)
+
+21>	What is use of synchronization and real example apart from object state saving ? 
+	(Sending data across in decrypted (binary) format)
+
+22>	What will be the considerations while designing the website like OLA/Uber ? 
+	(SLA Performance, Scaling, Availability, Security, Maintainability and so on)
+
+23>	What are the restriction on the keys of ConcurrentHashMap ? (Threading ENV)
+	It does not allow NULL key. (In Threading ENV, We can detect whether the key is explicitly mapped to null or key is not mapped)
+	It does not allow NULL value as well.
+	
+24>	How to sort data in file ? (Unix) 
+	(reading file in chuck and sorting and writing them to new temp file and finally merging all of them)
+
+DBG
+---------------------------------------------------------------------------------------------------------  	
+25>	How to reverse Linked List of Node ? (Data Structure List)
+	
+26>	Write a java program to find small number out of two entered number and swap them without 
 	using third variable ? and also write unit test cases to cover all possible scenarios.
--	Does wait method release lock on the object ?
--	How hashmap works internally ?
-- 	How hashmap "put" method achieve O(1) [constant] complexity ?
--	Can other threads call unsynchronized methods on locked objects by other thread ?
+	
+27>	Does wait method release lock on the object ?
+	Yes, Tread releases lock on object and goes in waiting state.
+	
+28>	How hashmap works internally?
+ 	First bucket ZERO index is assigned for null key.
+	Entry (same as Node) Array of 16 Entry(bucket) objects and each node generates linked list of similar hashcode objects.
+	
+29>	How hashmap "put" method achieve O(1) [constant] complexity ?
+	With the help of good implementation of hashcode method all items will be distributed equally across all buckets and which help in achieve O(1) [constant] complexity in case of get/put operation.
+	
+30>	Can other threads call unsynchronized methods on locked objects by other thread ?
+	Yes
+	
+ADP
+---------------------------------------------------------------------------------------------------------
+31>	How to configure the MVN commands in Jenkins pipeline job automatically?
+		
+32>	Why we need wrapper classes in java over primitives? 
+	(Use in collection and Null check and immutability)
+	
+33>	What are OOPs concepts? 
+	(Abstraction, Encapsulation, Inheritance and Polymorphism)
+	
+34>	Explain encapsulation and polymorphism achieved in your project ?
+	
+35>	What are performance issues you faced in your career and resolved them.
+	
+36>	What are the ways to improve performance at database level ?
+
+	Avoid unnecessary sorts.
+	Hint when needed.
+	Avoid cartesian products.
+	Avoid full table scan on large tables.
+	Avoid joining too many tables.
+	Use SQL standards and conventions to reduce parsing.
+	Try to use indexed cols in the where caluse.
+	Use compound indexes with care.
+	Skip scan index.
+	Monitor V$SESSION_LONGOPS.
+	Use the SHARED_CURSOR parameter.	
+	
+	Query Optimization ( Query Rewriting , Prepared Statements )
+	DB Caching Tuning ( if using ORM )
+	Identifying the problems ( if any ) with the ORM Strategy ( If using ORM )
+	Finally test correctly.
+	
+37>	How did achieve load balancing and clustering in your project with WebSphere App Server?
+	IBM Https Server for load balancing (Round Robin, Session Affinity, IP Address Affinity)
+	Clustering with session replication and providing DR for emergency PROD server down.
+	(Session Replication with InMemory, in File System or in Database)
+	
+38>	How will you design immutable/wrapper classes in java ?
+	public constructor, private final data members, public getter methods, no setter methods, final class.
+	and defensive copies in getter methods for mutable data types.
+	
+39>	Explain any requirement that you design and architect.
+	
+40>	Will finally block be executed if return statement is added in try block ?
+	Yes.
+	
+41>	Explain exceptions in java and how will you handle that in your application. 		
+	Always using OOTB exceptions if required custom will written. All exception will propagated properly and will not be eaten. Single exception from service layer will be thrown at presentation layer with required info to show on UI with human readable message.
+	Logs will be printed properly so supports people can be easily trace the issue.
+	
+	Programmer recovering exceptions will be declared as checked and cached properly and system exception will be marked as unchecked and will be thrown as runtime exceptions.
+	
+42>	What is exposure towards containers like Dockers ?
+	No
+	
+43>	Ansible is agent less then, What is connection method used by Ansible to connect target servers? SSH
+	SSH
+	
+44>	What are benefits of using SSH over other connections techniques?
+	Summary:
+
+	1. Normally, SSH uses port 22 while SSL uses port 443.
+	2. SSL is used predominantly for securely transmitting critical information like in credit cards and 
+		banking. On the other hand, SSH is for securely executing commands across the internet.
+	3. SSH uses a username/password authentication system to establish a secure connection while SSL 	
+		does not really bother with it.
+	4. SSH is more about network tunneling while SSL is more about certificates.
+
+45>	What is Ansible core and Ansible Tower and differences in using them ?
+	Ansible core is command line interface (CLI) and Ansible tower is User Interface (UI)
+	
+46>	How will you migrate 1000 WebSphere App Servers from older versions to newer versions?
+	NA
+
+47>	If performance of application gets downgrade in PROD then how you will you analyze and provide the 
+	fix for the same?
+	(JVM, Application Server tuning, Database tuning, caching in application.)
+	
+	Application Software Profiling
+	Application Server and JVM Tuning
+	Right Hardware and OS
+	Coding Improvement as per the behavior of your application and profiling results.
+	Use JVM the right way and optimal JVM parameters.
+	-XX:+UseParaller if you have multiprocessors.
+	
+	
+	Simple Java Performance Tuning Tips
+	-----------------------------------
+	1. Don’t optimize before you know it’s necessary
+	2. Use a profiler to find the real bottleneck
+	3. Create a performance test suite for the whole application
+	4. Work on the biggest bottleneck first
+	5. Use StringBuilder to concatenate Strings programmatically
+	6. Use + to concatenate Strings in in one statement
+	7. Use primitives where possible
+	8. Try to avoid BigInteger and BigDecimal
+	9. Check the current log level first
+	10. Use Apache Commons StringUtils.replace instead of String.replace
+	11. Cache expensive resources, like database connections
+	
+	Java Application Profiling
+	---------------------------------
+	Java Profiling is the process of monitoring various JVM level parameters such as Method Execution, Thread Execution, Object Creation and Garbage Collection. Java Profiling provides you with a finer view of your target application execution and its resource utilization. Java Profiling eliminates the need to spend long hours going through the code, and pinpoints the problems associated with your application. Java Profiling provides complete and accurate statistical information that helps you trace coding errors in your application. Java Profiling helps you diagnose and resolve performance problems, memory leaks and multi-threading problems in your Java or J2EE server applications to ensure the highest level of stability and scalability for your applications. Java Profiling provides you with a root-cause analysis of these problems and helps you resolve them.
+	
+	
+	
+48>	What are your expertise at sql/oracle layer?
+	complex queries, pl/sql as well.
+	
+49>	How will you analyze the performance of looking at heap dumps ? (Application, Application server, DB)
+	JVM, Application Server tuning, Database tuning, caching in application.
+	
+50>	How you provide the quick solutions on triage/swat calls ?
+	JVM, Application Server tuning, Database tuning, caching in application.
+	
+51>	How load balancing works and how will you configure the same ?
+	IBM Https Server for load balancing (Round Robin, Session Affinity, IP Address Affinity)
+	Clustering with session replication and providing DR for emergency PROD server down.
+	(Session Replication with InMemory, in File System or in Database)
+	
+52>	What things to be considered before migrating application from single node to clustered environment ?
+	(Session Replication (InMemory Replication, File System Replication, Database Replication))
+	
+53>	What are different algorithms of configuring load balancing in application ?
+	(Round Robin, Session Affinity, IP Address Affinity)
+	
+54>	How will you ensure the DR any running application in PROD ?
+	By pulling down the PROD server will ensure that DR is working or not.
+	
+55>Have you designed any solution recently and explain the same also any design patterns used ?
+	Web Services with Strategy and Builder Design Pattern
+	
+56>	Do you have any exposure to the middle ware technologies?
+ 	 (JMS, Web Services)
+	
+57>	How will you analyses the java heap dump ?
+	VisualVM, JConsole
+	
+Siemens
+---------------------------------------------------------------------------------------------------------
+58>	Brief about your current project and your role.
+	
+59>	What are the SOLID design principles and explain LSP and DIP in detail.
+	Single Responsibility Principle
+	Open for Extension Close for Modification Principle
+	Liskov's Substitution Principle
+	Interface Segregation Principle
+	Dependency Inversion Principle
+	
+60>	What are benefits of Dependency Inversion? Hint (Loose Coupling and Testability)
+	Loose Coupling, Testability
+	
+61>	What are differences between REST and SOPA web services?
+	
+62>	What are differences between GET POST PUT and DELETE https methods of REST API ?
+	GET, PUT and DELETE are idempotent - means does not allow repeated calls.
+	POST is non-idempotent - makes duplicate calls (Used for Record Creation)
+	
+63>	What is meant by Continuous Integration and Continuous Deployment ?
+	Integrating Builds with some time interval to check stability of the code and make it ready to deploy.
+	Deploying the artifacts and monitoring them and if fails again building and deploying fixed version.
+	
+64>	Which one will be used to soft delete resource in context of REST API, DELETE or PUT ?
+	PUT.
+	
+65>	What are benefits of Spring Boot and limitations as well?
+	(Spring Boot Convention over Configuration)
+	
+	The primary goals of Spring Boot are as below.
+	
+	- To provide radically faster and widely accessible 'getting started' for all Spring developement.
+	- To be opinionated out of the box, but get out of the way quickly as requirements start diverge 
+	  from default.
+	- To provide a range of non-functional features that are common to large classes of projects 
+		(e.g. Embedded servers, security, metrics, health checks, externalized configuration)
+	- Spring Boot on the other hand helps to build an application faster using spring technologies   	
+	  without xml configuration.
+	  
+66>	Explain Java 8 features in detail. 
+	(Lambda, Functional Interface, Stream, DateTime API, Default 
+	Method in Interface, Method Reference)
+	
+67>	Why default methods added in interface in java 8 ? (backward compatibility)
+	Backward Compatibility.
+	
+68>	Is java script is Object Oriented language ? (Yes)
+	Yes.
+	
+69> What are restrictions on stateful webservices ?
+
+70> What are meant by compensating services ?
+
+71> How to scale up application having stateful webservices ?
+
+72> What implementation is behind Single Sign On (SSO) concept ?
+
+73> How to rollback the transcation having multiple/different databases and MQ and Web Services call ?
+
+74> What are points to be considered while disigning services under SOA ?
+
+75> What is your experince about CI/CD ?
 
 	
+1> What are important security issues in internet based applications ?
+	Authentication
+	Autharization
+	Data Encryption
+	Denial Services
+	XSS Attacks
+	SQL Injection Attacks
+		
+2> 
 
+Useful Sites for Java Interview : -
+---------------------------------------------------------------------------------------------------------
+https://java2blog.com/java-interview-programs/
+https://www.dineshonjava.com/whats-new-in-spring-framework-4x/
+http://codepumpkin.com/cyclicbarrier-java-concurrency-utilities/
+https://stackify.com/java-performance-tools-8-types-tools-need-know/
+https://crunchify.com/
+http://javadecodedquestions.blogspot.hk/2012/12/java-memory-management.html
+http://infotechgems.blogspot.hk/2011/11/java-collections-performance-time.html
+https://www.thoughtworks.com/insights/blog/composition-vs-inheritance-how-choose
+http://www.geekinterview.com/
+http://www.springboottutorial.com/spring-boot-interview-questions
+http://www.baeldung.com/
+http://tutorials.jenkov.com/
+https://stackify.com/great-java-developer-skills/
+https://www.buggybread.com/2015/02/java-j2ee-technical-lead-interview.html
+https://stackify.com/what-is-visualvm/
+https://www.thoughts-on-java.org/tutorials/
+https://stackify.com/java-performance-tuning/
+http://www.appperfect.com/products/java-testing/java-profiling.php
+https://www.thoughtworks.com/insights/blog/composition-vs-inheritance-how-choose
+http://codepumpkin.com/hashtable-vs-synchronizedmap-vs-concurrenthashmap/
+http://www.geekinterview.com/
+https://www.geeksforgeeks.org/arrays-in-java/
+https://www.roseindia.net/jpa/jpa-tutorial.shtml
+https://alexandreesl.com/tag/spring-boot/
+http://www.springboottutorial.com/spring-boot-interview-questions
+https://in28minutes1.teachable.com/courses/257263/lectures/3995813
+http://www.java2novice.com/java-interview-programs/
+http://www.vogella.com/tutorials/JavaDatastructureList/article.html
+https://stackify.com/jenkins-teamcity-bamboo/
+http://www.codenuclear.com/how-arraylist-works-internally-java/
+https://discuss.codechef.com/questions/48877/data-structures-and-algorithms
+http://bigocheatsheet.com/
+https://www.geeksforgeeks.org/binary-search/
+http://javarevisited.blogspot.in/2013/03/top-15-data-structures-algorithm-interview-questions-answers-java-programming.html
+https://www.interviewcake.com/java-interview-questions
+https://abhirockzz.wordpress.com/2015/10/19/basics-of-scaling-java-ee-applications/
 
-
-
-
-
-
+https://www.tutorialspoint.com/software_architecture_design/introduction.htm
+http://www.java-examples.com/
+http://www.java-examples.com/java-collections-and-data-structures-(-java.util-package-)
+http://www.javapractices.com/topic/TopicAction.do?Id=65
+http://www.sanfoundry.com/
+http://www.sanfoundry.com/java-questions-answers-freshers-experienced/
+http://www.javagyan.com/preparing-for-an-interview
+http://www.javainterview.in/p/architect-interview-questions.html
+http://www.javagyan.com/preparing-for-an-interview/java-j2ee-interview-questions
+http://www.javagyan.com/preparing-for-an-interview
+http://www.javagyan.com/certifications/scea-resources/scea-tutorials
+http://www.javainterview.in/p/java-interview-guide.html
+http://www.oodesign.com/singleton-pattern.html
+https://www.engvid.com/english-resources/
