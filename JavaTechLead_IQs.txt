@@ -443,6 +443,30 @@ Siemens
 
 75> What is your experince about CI/CD ?
 
+Barclays 1 Round
+-------------------------------------------------------------------------------
+What are benefits of using ArrayList over Array ?
+How TreeSet works internally ?
+How to set priority on Threads ?
+Which one is better synchronized block or method ?
+Is it poosible to work two threads of object and static methods simultaniously ?
+What is ThreadLocal ?
+What is difference between Factory and Builder design pattern ?
+What are different design pattern that you have worked on ?
+What will be the solution when Queue is getting more messages (How to handle) ?
+How to send messages on Queue for different receivers ?
+How Spring container resolve cyclic dependencies ?
+What is difference between @Service and @Repository annotations ?
+Can application have multiple Spring containers ?
+Is FetchType is applicable for all relationships in Hibernate ?
+Is Lazy Loading possible with primitives ?
+What is proxy in Hibernate ?
+What is difference between get and put in terms of REST API?
+How to marshalling/unmarshalling happens once message recieves from Queue ?
+Is it possible that get method have http body ?
+How to put layering protection like Spring without Spring ? (Access Modifiers)
+
+
 	
 1> What are important security issues in internet based applications ?
 	Authentication
