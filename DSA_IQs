@@ -1,0 +1,44 @@
+Stack :
+Question 1:  Implement a stack using array.
+Question 2: Implement a stack using Linked List :
+Question 3:  Implement a stack using two queues .
+Question 4 :  Sort an stack using another stack
+Linked List :
+Question 5 : Implement singly linked list in java.
+Question 6: How to reverse linked list in java.
+Question 7: How to find middle element of linked list.
+Question 8 : How to find nth element from end of linked list .
+Question 9  : How to detect a loop in linked list. If linked list has loop, find the start node for the loop.
+Question 10: How to check if linked list is palindrome or not?
+Question 11 :  How to reverse a linked list in pairs?
+Binary Tree :
+Question 12: How can you traverse binary tree?
+Question 13 : Write an algorithm to do level order traversal of binary tree?
+Question 14 :  Write an algorithm to do spiral order traversal of binary tree?
+Question 15: How can you print leaf nodes of binary tree?
+Question 16: How to count leaf nodes of binary tree.
+Question 17. How to print all paths from root to leaf in binary tree.
+Question 18 : How to find level of node in binary tree
+Question 19: How to find maximum element in binary tree.
+Question 20 : How to find lowest common ancestor(LCA) in binary tree.
+Question 21 : How to do boundary traversal of binary tree.
+Question 22 : How to print vertical sum of binary tree?
+Binary Search tree:
+Question 23 : What is binary search tree?
+Question 24: Can you write algorithm to insert a node in binary search tree.
+Question 25: Can you write algorithm to delete a node in binary search tree.
+Question 26:  How can you find minimum and maximum elements in binary search tree?
+Question 27 : How to find lowest common ancestor(LCA) in binary search tree.
+Sorting :
+Question 28 : Can you write algorithm for merge sort and also do you know complexity of merge sort?
+Question 29 : What is binary search? Can you write an algorithm to find an element in sorted array using binary search?
+Array:
+Question 30  : Find missing number in the array.
+Question 31 : Search an element in rotated and sorted array.
+Question 32: Find second largest number in an array
+Question 33: Find the number occurring odd number of times in an array
+Question 34: Find minimum number of platforms required for railway station
+You are given arrival and departure time of trains reaching to a particular station. You need to find minimum number of platforms required to accommodate the trains at any point of time.
+Question 35: Find a Pair Whose Sum is Closest to zero in Array
+Question 36: Given a sorted array and a number x, find the pair in array whose sum is closest to x
+Question 37: Find all pairs of elements from an array whose sum is equal to given number
