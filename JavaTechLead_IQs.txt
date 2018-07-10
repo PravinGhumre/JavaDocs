@@ -443,31 +443,134 @@ Siemens
 
 75> What is your experince about CI/CD ?
 
+UBS
+----------------------------------------------------------------------------------------------------
+76> What are SOLID design principles, explain in details.
+
+77> Write down code for OCP desing principle.
+
+78> How hashmap works internally ? (without impl of hashcode and with implementing hashcode)
+
+79> Write down code for Builder Design Pattern.
+
+80> Exlain Strategy Design Pattern.
+
+81> How to identify the sum of which two elements from array ?
+
+82> Write down code to identify the point where two linked list are getting merged ?
+
 Barclays 1 Round
 -------------------------------------------------------------------------------
-What are benefits of using ArrayList over Array ?
-How TreeSet works internally ?
-How to set priority on Threads ?
-Which one is better synchronized block or method ?
-Is it poosible to work two threads of object and static methods simultaniously ?
-What is ThreadLocal ?
-What is difference between Factory and Builder design pattern ?
-What are different design pattern that you have worked on ?
-What will be the solution when Queue is getting more messages (How to handle) ?
-How to send messages on Queue for different receivers ?
-How Spring container resolve cyclic dependencies ?
-What is difference between @Service and @Repository annotations ?
-Can application have multiple Spring containers ?
-Is FetchType is applicable for all relationships in Hibernate ?
-Is Lazy Loading possible with primitives ?
-What is proxy in Hibernate ?
-What is difference between get and put in terms of REST API?
-How to marshalling/unmarshalling happens once message recieves from Queue ?
-Is it possible that get method have http body ?
-How to put layering protection like Spring without Spring ? (Access Modifiers)
+83> What are benefits of using ArrayList over Array ?
+
+84> How TreeSet works internally ?
+ 
+85> How to set priority on Threads ?
+
+86> Which one is better synchronized block or method ?
+
+87> Is it poosible to work two threads of object and static methods simultaniously ?
+
+88> What is ThreadLocal ?
+
+89> What is difference between Factory and Builder design pattern ?
+ 
+90> What are different design pattern that you have worked on ?
+ 
+91> What will be the solution when Queue is getting more messages (How to handle) ?
+ 
+91> How to send messages on Queue for different receivers ?
+
+92> How Spring container resolve cyclic dependencies ?
+ 
+93> What is difference between @Service and @Repository annotations ?
+ 
+94> Can application have multiple Spring containers ?
+ 
+95> Is FetchType is applicable for all relationships in Hibernate ?
+ 
+96> Is Lazy Loading possible with primitives ?
+ 
+97> What is proxy in Hibernate ?
+ 
+98> What is difference between get and put in terms of REST API?
+ 
+99> How to marshalling/unmarshalling happens once message recieves from Queue ?
+ 
+100> Is it possible that get method have http body ?
+ 
+101> How to put layering protection like Spring without Spring ? (Access Modifiers)
+
+Barclays 2 Round
+-------------------------------------------------------------------------------
+102> How to scale application vertically and what are all configurations that will be changed to achieve the same ?
+ 
+103> What are security measures of enterprise applications ?
+ 
+104> How many requests a WepSphere App Server can handle at a time ?
+ 
+105> Why TPS 32 is configured ?
+ 
+106> What are the issues that you faced and resolved while doing stress testing with JMeter ?
+ 
+107> Have you configured any WepSphere App Server instance ever ?
+
+Additional Questions
+--------------------------------------------------------------------------------------
+Barclay's Questions
+------------------
+
+Core java 
+
+1) Collections - 
+How hashmap works internally?
+what is default implementation of hashcode and equals?
+2) what is comparator and comparable ? how it works
+3) what are immutable objects , where we can use immutable objects?
+4) how to make class immutable which has 2-3 composite objects ?
+5) what is defensive copy?
+7) What is executor service ? how is it different from normal way of threading?
+8) write singleton class, how it behave in multi threaded environment?
+9) what is double lock in singleton class? write singleton class with multi threading and double lock
+10)what is serialization and why we need serialization?
+11) what is in JSR 303 (Validation API)
+12)can we have duplicate keys in 
+13) Java.util.concurrent (syncronizedHashmap etc)
+14) fail fast and fail safe iterator 
 
 
-	
+Hibernate 
+
+1) Hibernate Mapping ,association
+	(Annotations )
+2) Hibernate Steps
+3) Hibernate & Spring implementation 
+4) Lazy loading and eager loading 
+5) fetching strategy 
+6) what is different between save , persist, save&update
+7) can we have 2 session factories in application ?
+
+Spring 
+
+1) how you can configure spring without any server
+2) what is spring and its benifits
+3) RESTFUL webservice using spring MVC
+4) write the steps hibernate and spring integration
+5) what is singleton and prototype?
+6) if one bean is singleton and other 2 injected beans are prototype , how it behaves and vice versa
+7) if one bean is already defined in configuration file , and you are creating object with new of same object , will it be fine?
+8) what is spring AOP and write configuration steps
+9) how to configure properties file in spring 
+10) if we are using annotation in spring application , what we have to do in configuration file?
+
+DB 
+---
+Self join 
+inner join 
+orderby and group by
+
+-----------------
+
 1> What are important security issues in internet based applications ?
 	Authentication
 	Autharization
@@ -476,58 +579,4 @@ How to put layering protection like Spring without Spring ? (Access Modifiers)
 	XSS Attacks
 	SQL Injection Attacks
 		
-2> 
-
-Useful Sites for Java Interview : -
----------------------------------------------------------------------------------------------------------
-https://java2blog.com/java-interview-programs/
-https://www.dineshonjava.com/whats-new-in-spring-framework-4x/
-http://codepumpkin.com/cyclicbarrier-java-concurrency-utilities/
-https://stackify.com/java-performance-tools-8-types-tools-need-know/
-https://crunchify.com/
-http://javadecodedquestions.blogspot.hk/2012/12/java-memory-management.html
-http://infotechgems.blogspot.hk/2011/11/java-collections-performance-time.html
-https://www.thoughtworks.com/insights/blog/composition-vs-inheritance-how-choose
-http://www.geekinterview.com/
-http://www.springboottutorial.com/spring-boot-interview-questions
-http://www.baeldung.com/
-http://tutorials.jenkov.com/
-https://stackify.com/great-java-developer-skills/
-https://www.buggybread.com/2015/02/java-j2ee-technical-lead-interview.html
-https://stackify.com/what-is-visualvm/
-https://www.thoughts-on-java.org/tutorials/
-https://stackify.com/java-performance-tuning/
-http://www.appperfect.com/products/java-testing/java-profiling.php
-https://www.thoughtworks.com/insights/blog/composition-vs-inheritance-how-choose
-http://codepumpkin.com/hashtable-vs-synchronizedmap-vs-concurrenthashmap/
-http://www.geekinterview.com/
-https://www.geeksforgeeks.org/arrays-in-java/
-https://www.roseindia.net/jpa/jpa-tutorial.shtml
-https://alexandreesl.com/tag/spring-boot/
-http://www.springboottutorial.com/spring-boot-interview-questions
-https://in28minutes1.teachable.com/courses/257263/lectures/3995813
-http://www.java2novice.com/java-interview-programs/
-http://www.vogella.com/tutorials/JavaDatastructureList/article.html
-https://stackify.com/jenkins-teamcity-bamboo/
-http://www.codenuclear.com/how-arraylist-works-internally-java/
-https://discuss.codechef.com/questions/48877/data-structures-and-algorithms
-http://bigocheatsheet.com/
-https://www.geeksforgeeks.org/binary-search/
-http://javarevisited.blogspot.in/2013/03/top-15-data-structures-algorithm-interview-questions-answers-java-programming.html
-https://www.interviewcake.com/java-interview-questions
-https://abhirockzz.wordpress.com/2015/10/19/basics-of-scaling-java-ee-applications/
-
-https://www.tutorialspoint.com/software_architecture_design/introduction.htm
-http://www.java-examples.com/
-http://www.java-examples.com/java-collections-and-data-structures-(-java.util-package-)
-http://www.javapractices.com/topic/TopicAction.do?Id=65
-http://www.sanfoundry.com/
-http://www.sanfoundry.com/java-questions-answers-freshers-experienced/
-http://www.javagyan.com/preparing-for-an-interview
-http://www.javainterview.in/p/architect-interview-questions.html
-http://www.javagyan.com/preparing-for-an-interview/java-j2ee-interview-questions
-http://www.javagyan.com/preparing-for-an-interview
-http://www.javagyan.com/certifications/scea-resources/scea-tutorials
-http://www.javainterview.in/p/java-interview-guide.html
-http://www.oodesign.com/singleton-pattern.html
-https://www.engvid.com/english-resources/
+2>
